@@ -35,9 +35,10 @@ float t = 0.0f;
 float x, y;
 
 #define eps 0.01f
-
+int i = 1;
 while(1)
 {
+
 	x = x0 + v0x * t;
 	y = y0 + v0y * t - g * t * t / 2.0f;
 
@@ -46,8 +47,9 @@ while(1)
 	printf("%f %f %f\n", t, x, y);
 
 	t += eps;
+    i++;
 }
-
+printf("step: %d\n", i);
 printf("t = %f, x = %f, y = %f\n", t, x, y);
 
 return 0;
