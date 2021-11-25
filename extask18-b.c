@@ -41,23 +41,23 @@ int main()
     s1[k+1]='\n';
     n[k+1]=0;
 
-    char *z = strchr(s1, '\n');	//находит символ в строке
+    char *q = strchr(s1, '\n');	//находит символ в строке
 
-    if(z != NULL) *z = '\0';
+    if(q != NULL) *q = '\0';
     
-    int g=strlen(s1);    
+    int len1 = strlen(s1);    
 
-    for(int i=0;i<g;i++)
+    for(int i = 0; i < len1; i++)
     {
-        if ((n[i]!=1)&&(n[i]!=0)&&(s1[i]!='\0')) printf("%c%d",s1[i],n[i]);
-        else printf("%c",s1[i]);
+        if ((n[i] != 1) && (n[i] != 0) && (s1[i] != '\0')) printf("%c%d", s1[i], n[i]);
+        else printf("%c", s1[i]);
     }
 
     printf("\n");
 
-    for(int i=0;i<g;i++)
-        for(int j=0;j<n[i];j++)
-            printf("%c",s1[i]);
+    for(int i = 0; i < len1; i++)
+        for(int j = 0 ; j < n[i]; j++)
+            printf("%c", s1[i]);
 
     printf("\n");
 
