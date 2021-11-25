@@ -13,33 +13,33 @@ int main()
     char s1[30];
     int n[30];
 
-    for (int i=0;i<30;i++)
-        n[i]=0;
+    for (int i = 0; i < 30; i++)
+        n[i] = 0;
 
-    int j=1;
+    int j = 1;
 
-    s1[0]=s[0];
-    n[0]=1;
+    s1[0] = s[0];
+    n[0] = 1;
 
-    int k=0;
+    int k = 0;
 
-    while (s[j]!='\0')
+    while (s[j] != '\0')
     {
-        if (s[j]==s[j-1])
+        if (s[j] == s[j - 1])
         {
             n[k]++;
         }
         else 
         {
             k++;
-            s1[k]=s[j];
+            s1[k] = s[j];
             n[k]++;
         }
         j++;
     }
 
-    s1[k+1]='\n';
-    n[k+1]=0;
+    s1[k + 1] = '\n';
+    n[k + 1] = 0;
 
     char *q = strchr(s1, '\n');	//находит символ в строке
 
